@@ -8,7 +8,7 @@ load_dotenv()
 USERNAME = os.environ['USERNAME']
 
 # Google service account credentials dictionary
-credentials_dict = {
+CREDENTIALS_DICT = {
     "type": os.environ['GOOGLE_TYPE'],
     "project_id": os.environ['GOOGLE_PROJECT_ID'],
     "private_key_id": os.environ['GOOGLE_PRIVATE_KEY_ID'],
