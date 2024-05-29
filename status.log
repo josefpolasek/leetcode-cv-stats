@@ -1,0 +1,7 @@
+2024-05-29 17:09:03,525 - __main__ - INFO - Starting the script.
+2024-05-29 17:09:07,382 - __main__ - INFO - Copied template to new document with ID: 1eMM4DYLKqAnUiHw4AnZDTZA8FdrO7x1MiWi5HELKyeI
+2024-05-29 17:09:08,062 - __main__ - INFO - Replaced placeholders in the document.
+2024-05-29 17:09:08,767 - __main__ - INFO - Deleted existing file with ID: 1FsuLJWbDsHC5gy5FYB0ntXgCt6PgMPWM
+2024-05-29 17:09:09,481 - __main__ - INFO - Exported document to PDF.
+2024-05-29 17:09:10,525 - __main__ - INFO - Uploaded new CV.pdf with ID: 1C-5gQhAU157fLwxcd1oFJDqDT567C9mr
+2024-05-29 17:09:10,948 - __main__ - INFO - Deleted temporary document.
