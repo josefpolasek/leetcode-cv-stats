@@ -54,3 +54,10 @@
 2024-06-03 00:55:15,440 - __main__ - INFO - Exported document to PDF.
 2024-06-03 00:55:16,627 - __main__ - INFO - Uploaded new CV.pdf with ID: 1-olyWTHZNPo0MI1ahb9G48CBy9w--anu
 2024-06-03 00:55:17,043 - __main__ - INFO - Deleted temporary document.
+2024-06-04 00:54:51,493 - __main__ - INFO - Starting the script.
+2024-06-04 00:54:55,640 - __main__ - INFO - Copied template to new document with ID: 1_ZfzgCku9Hnv0IJfcbgTpEP115D9gm1EudNAO37daVE
+2024-06-04 00:54:56,375 - __main__ - INFO - Replaced placeholders in the document.
+2024-06-04 00:54:57,156 - __main__ - INFO - Deleted existing file with ID: 1-olyWTHZNPo0MI1ahb9G48CBy9w--anu
+2024-06-04 00:54:57,946 - __main__ - INFO - Exported document to PDF.
+2024-06-04 00:54:59,291 - __main__ - INFO - Uploaded new CV.pdf with ID: 1GMCL5kncrx6O4Tgn05IDPbClwl9yjLt9
+2024-06-04 00:54:59,756 - __main__ - INFO - Deleted temporary document.
