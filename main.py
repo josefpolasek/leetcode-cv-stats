@@ -8,7 +8,7 @@ from googleapiclient.discovery import build
 import datetime
 import io
 from googleapiclient.http import MediaIoBaseUpload
-from config import USERNAME, TEMPLATE_ID, FOLDER_ID, CREDENTIALS_DICT
+from config import USERNAME, TEMPLATE_ID, FOLDER_ID, CREDENTIALS_DICT, FULL_NAME
 
 # Setup logging
 logger = logging.getLogger(__name__)
@@ -93,7 +93,7 @@ if __name__ == "__main__":
         logger.info("Replaced placeholders in the document.")
 
         # Step 4: Delete duplicate CV.pdf
-        file_name = 'CV.pdf'
+        file_name = f'CV_{FULL_NAME}.pdf'
         query = f'"{FOLDER_ID}" in parents and trashed=false and name="{file_name}"'
         results = drive_service.files().list(q=query).execute()
         files = results.get('files', [])
@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
         # Step 6: Upload the PDF
         file_metadata = {
-            'name': 'CV.pdf',
+            'name': f'CV_{FULL_NAME}.pdf',
             'parents': [FOLDER_ID]
         }
         pdf_file_io = io.BytesIO(pdf_file)

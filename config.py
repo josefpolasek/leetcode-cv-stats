@@ -25,3 +25,6 @@ CREDENTIALS_DICT = {
 # Documents and folders in GDrive
 TEMPLATE_ID = os.environ['TEMPLATE_ID']
 FOLDER_ID = os.environ['FOLDER_ID']
+
+# Full name of the user
+FULL_NAME = os.environ['FULL_NAME']
