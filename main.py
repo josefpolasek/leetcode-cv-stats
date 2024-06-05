@@ -32,16 +32,13 @@ def get_leetcode_profile_data(username):
         profile_data = json.loads(response_content)
         return profile_data
     else:
-        logger.error("Failed to retrieve data.")
-        return None
+        raise Exception("Failed to retrieve LeetCode profile data.")
 
 
-if __name__ == "__main__":
-    logger.info("Starting the script.")
-
-    # Step 1: Get data from Leetcode
-    profile_data = get_leetcode_profile_data(USERNAME)
-    if profile_data:
+def main():
+    try:
+        # Step 1: Get data from Leetcode
+        profile_data = get_leetcode_profile_data(USERNAME)
         easy = profile_data["easySolved"]
         medium = profile_data["mediumSolved"]
         hard = profile_data["hardSolved"]
@@ -57,7 +54,6 @@ if __name__ == "__main__":
         body = {'name': copy_title}
         drive_response = drive_service.files().copy(fileId=TEMPLATE_ID, body=body).execute()
         document_copy_id = drive_response.get('id')
-        logger.info(f"Copied template to new document with ID: {document_copy_id}")
 
         # Step 3: Replace placeholders
         replacements = {
@@ -88,9 +84,7 @@ if __name__ == "__main__":
             }
         })
 
-        result = docs_service.documents().batchUpdate(documentId=document_copy_id,
-                                                      body={'requests': requests}).execute()
-        logger.info("Replaced placeholders in the document.")
+        result = docs_service.documents().batchUpdate(documentId=document_copy_id, body={'requests': requests}).execute()
 
         # Step 4: Delete duplicate CV.pdf
         file_name = f'CV_{FULL_NAME}.pdf'
@@ -100,13 +94,9 @@ if __name__ == "__main__":
         if files:
             file_id = files[0]['id']
             drive_service.files().delete(fileId=file_id).execute()
-            logger.info(f"Deleted existing file with ID: {file_id}")
-        else:
-            logger.info("No existing CV.pdf file found.")
 
         # Step 5: Export to PDF
         pdf_file = drive_service.files().export(fileId=document_copy_id, mimeType='application/pdf').execute()
-        logger.info("Exported document to PDF.")
 
         # Step 6: Upload the PDF
         file_metadata = {
@@ -120,10 +110,17 @@ if __name__ == "__main__":
             media_body=media,
             fields='id'
         ).execute()
-        logger.info(f"Uploaded new CV.pdf with ID: {uploaded_file['id']}")
 
         # Step 7: Delete the tmp file
         drive_service.files().delete(fileId=document_copy_id).execute()
-        logger.info("Deleted temporary document.")
-    else:
-        logger.error("Profile data could not be retrieved. Script exiting.")
+
+        # Final status log
+        logger.info("Script completed successfully.")
+
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+        logger.info("Script failed.")
+
+
+if __name__ == "__main__":
+    main()
