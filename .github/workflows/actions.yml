@@ -27,7 +27,7 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
           FOLDER_ID: ${{ secrets.FOLDER_ID }}
-          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_NAME: ${{ secrets.FULL_NAME }}
           GOOGLE_TYPE: ${{ secrets.GOOGLE_TYPE }}
           GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
           GOOGLE_PRIVATE_KEY_ID: ${{ secrets.GOOGLE_PRIVATE_KEY_ID }}
