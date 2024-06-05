@@ -68,3 +68,10 @@
 2024-06-05 00:54:40,573 - __main__ - INFO - Exported document to PDF.
 2024-06-05 00:54:42,309 - __main__ - INFO - Uploaded new CV.pdf with ID: 1yRHOHOn7cvUU9NjiE9H4x6wsuVMtUFyH
 2024-06-05 00:54:42,984 - __main__ - INFO - Deleted temporary document.
+2024-06-05 13:01:20,555 - __main__ - INFO - Starting the script.
+2024-06-05 13:01:25,024 - __main__ - INFO - Copied template to new document with ID: 1rQCTuzfMzrV6FmC53te_TeI716NGa0UF_toVa1vjbHA
+2024-06-05 13:01:25,666 - __main__ - INFO - Replaced placeholders in the document.
+2024-06-05 13:01:25,990 - __main__ - INFO - No existing CV.pdf file found.
+2024-06-05 13:01:26,742 - __main__ - INFO - Exported document to PDF.
+2024-06-05 13:01:28,202 - __main__ - INFO - Uploaded new CV.pdf with ID: 1EJzw79t_2pcLjqkGO9vIQCsMj9RkVGpa
+2024-06-05 13:01:28,981 - __main__ - INFO - Deleted temporary document.
