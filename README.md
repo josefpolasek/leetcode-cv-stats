@@ -1,4 +1,4 @@
-# LeetCode CV Automation
+# Leetcode CV Automatic Stats
 
 This project automates updating a CV with the latest LeetCode statistics and generating a PDF document. The entire workflow runs automatically using GitHub Actions.
 
